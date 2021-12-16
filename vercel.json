@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+        { "source": "/:id/:hash", "destination": "/api/handleRequest" },
+        { "source": "/(.*)", "destination": "/api/404" }
+    ]
+}

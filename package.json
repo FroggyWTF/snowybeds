@@ -1,0 +1,25 @@
+{
+  "name": "snowybeds",
+  "version": "1.0.0",
+  "description": "Embed generation for Snowflakes bot",
+  "main": "src/index",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FroggyWTF/snowybeds.git"
+  },
+  "author": "TheOnlyGhostwolf",
+  "bugs": {
+    "url": "https://github.com/FroggyWTF/snowybeds/issues"
+  },
+  "homepage": "https://github.com/FroggyWTF/snowybeds#readme",
+  "devDependencies": {
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "fastify": "^3.25.0"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.17",
+    "node-fetch": "^2.6.6"
+  }
+}
