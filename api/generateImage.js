@@ -6,18 +6,18 @@ const fetch = require('node-fetch');
 // eslint-disable-next-line no-async-promise-executor
 module.exports = (id, hash) => new Promise(async (resolve, reject) => {
   try {
-    const canvas = Canvas.createCanvas(960, 540);
+    const canvas = Canvas.createCanvas(480, 270);
     const context = canvas.getContext('2d');
     const template = await fs.readFileSync(path.join(__dirname, 'assets', 'template.png'));
     const templateImage = new Canvas.Image();
     templateImage.src = template;
     context.drawImage(templateImage, 0, 0);
     // eslint-disable-next-line consistent-return
-    fetch(`https://cdn.discordapp.com/avatars/${id}/${hash}.png?size=256`).then(async (image) => {
+    fetch(`https://cdn.discordapp.com/avatars/${id}/${hash}.png?size=128`).then(async (image) => {
       if (!image.ok) return reject(Error('Failed to get profile picture'));
       const profilePicture = new Canvas.Image();
       profilePicture.src = await image.buffer();
-      context.drawImage(profilePicture, 352, 44, 257, 257);
+      context.drawImage(profilePicture, 176, 22, 128, 128);
       canvas.toBuffer('image/png');
       resolve(canvas);
     });

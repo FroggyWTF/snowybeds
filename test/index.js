@@ -3,7 +3,7 @@ const fastify = require('fastify')({ logger: false });
 const generateImage = require('../api/generateImage');
 
 fastify.get('/', async (req, res) => {
-  generateImage('4940371919752396480', '4c71f5768c571968ef597a552e877f98').then((image) => {
+  generateImage('494037191975239680', '6f1621f2c949674e96b9be3f09d48b8d').then((image) => {
     res.status(200).type('image/png').send(image.toBuffer('image/png'));
   }).catch((err) => res.status(500).send(err));
 });
